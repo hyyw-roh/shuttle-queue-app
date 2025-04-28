@@ -21,6 +21,27 @@
     }
   </style>
 </head>
+
+<script>
+  function checkTime() {
+    const now = new Date();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    const current = hour * 60 + minute;
+
+    const startTime = 15 * 60 + 20;  // 15:20 → 920분
+    const endTime = 16 * 60 + 50;    // 16:50 → 1010분
+
+    if (current < startTime || current > endTime) {
+      alert("지금은 셔틀버스 줄서기 이용 시간이 아닙니다.\n15:20~16:50 사이에 이용해 주세요.");
+      document.body.innerHTML = "<h2 style='color:red;'>줄서기 이용 가능 시간: 15:20~16:50</h2>";
+    }
+  }
+
+  // 페이지 열릴 때 시간 체크
+  checkTime();
+</script>
+  
 <body>
   <h2>셔틀버스 줄서기 시스템</h2>
   <button onclick="joinQueue()">줄서기 참여</button>
