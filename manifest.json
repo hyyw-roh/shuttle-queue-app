@@ -1,7 +1,7 @@
 {
     "name": "셔틀버스 줄서기",
     "short_name": "줄서기",
-    "start_url": "/shuttle-queue-app/index.html",
+    "start_url": "shuttle-queue-app/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#2196f3",
